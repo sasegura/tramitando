@@ -27,6 +27,7 @@
         "react-router-dom": "^5.2.0",
         "react-scripts": "4.0.0",
         "react-scroll-up-button": "^1.6.4",
+        "react-step-wizard": "^5.3.9",
         "react-transition-group": "^4.4.1"
     },
     "scripts": {

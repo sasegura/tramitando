@@ -1,4 +1,9 @@
 import React from "react";
+import StepWizard from "react-step-wizard";
+import { Paso1 } from "./CertificadoDigital/Paso1";
+import { Paso2 } from "./CertificadoDigital/Paso2";
+import { Paso3 } from "./CertificadoDigital/Paso3";
+import { Paso4 } from "./CertificadoDigital/Paso4";
 
 export const CertificadoDigital = () => {
     return (
@@ -6,6 +11,12 @@ export const CertificadoDigital = () => {
             <div className="p-col-12 p-d-flex">
                 <div className="p-col-1"></div>
                 <div className="card p-col-10">
+                    <StepWizard>
+                        <Paso1 />
+                        <Paso2 />
+                        <Paso3 />
+                        <Paso4 />
+                    </StepWizard>
                     <h5>Requisitos para tramitar el certificado de firma electrónica o digital</h5>
                     <p>En la actualidad, el avance de la tecnología nos permite gestionar todo tipo de trámites de forma online desde casa. Esto ha traído muchas ventajas y beneficios, especialmente para quienes no desean pasar mucho tiempo en largas colas.</p>
                     <p>
