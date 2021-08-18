@@ -15,18 +15,6 @@ export const Paso3 = (props) => {
                 <li>Pedir ayudas y subvenciones.</li>
                 <li>Declaración de impuestos.</li>
             </div>
-            <p>
-                <button onClick={props.previousStep}>Previous Step</button>
-            </p>
-            <p>
-                <button onClick={props.nextStep}>Next Step</button>
-            </p>
-            <p>
-                <button onClick={props.firstStep}>First Step</button>
-            </p>
-            <p>
-                <button onClick={props.lastStep}>Last Step</button>
-            </p>
         </div>
     );
 };

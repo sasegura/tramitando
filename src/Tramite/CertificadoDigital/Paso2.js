@@ -13,18 +13,6 @@ export const Paso2 = (props) => {
                 Por otro lado, la firma digital se refiere a los caracteres que se colocan en un documento para identificar al firmante y darle así validez al documento. Está basada en el sistema PKI (Criptografía de Clave Pública) y tiene certificado oficial por parte de una Institución que le da
                 validez.
             </p>
-            <p>
-                <button onClick={props.previousStep}>Previous Step</button>
-            </p>
-            <p>
-                <button onClick={props.nextStep}>Next Step</button>
-            </p>
-            <p>
-                <button onClick={props.firstStep}>First Step</button>
-            </p>
-            <p>
-                <button onClick={props.lastStep}>Last Step</button>
-            </p>
         </div>
     );
 };

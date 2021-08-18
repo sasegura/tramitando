@@ -9,19 +9,6 @@ export const Paso1 = (props) => {
                 Sin embargo, muchos de estos trámites exigen una autentificación de identidad y confiabilidad que podemos tener con una firma electrónica. A continuación, te explicamos todo lo que necesitas saber sobre la firma electrónica. No te pierdas esta guía. Ahórrate tiempo y dolores de
                 cabeza.
             </p>
-
-            <p>
-                <button onClick={props.previousStep}>Previous Step</button>
-            </p>
-            <p>
-                <button onClick={props.nextStep}>Next Step</button>
-            </p>
-            <p>
-                <button onClick={props.firstStep}>First Step</button>
-            </p>
-            <p>
-                <button onClick={props.lastStep}>Last Step</button>
-            </p>
         </div>
     );
 };
