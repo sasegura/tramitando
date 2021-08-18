@@ -1,0 +1,6 @@
+{
+    "tramitesServices": [
+        { "label": "Renovar el NIE", "url": "/RenovarNIE" },
+        { "label": "Firma Electrónica", "url": "/FirmaElectronica" }
+    ]
+}

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import classNames from "classnames";
 import { Route, useHistory } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
+import { CircleArrow as ScrollUpButton } from "react-scroll-up-button";
 
 import { AppTopbar } from "./AppTopbar";
 import { AppFooter } from "./AppFooter";
@@ -9,7 +10,6 @@ import { AppMenu } from "./AppMenu";
 import { AppProfile } from "./AppProfile";
 import { AppConfig } from "./AppConfig";
 
-import Header from "./components/Header/Header";
 import { Dashboard } from "./components/Dashboard";
 import { ButtonDemo } from "./components/ButtonDemo";
 import { ChartDemo } from "./components/ChartDemo";
@@ -54,18 +54,27 @@ import "@fullcalendar/timegrid/main.css";
 import "./layout/flags/flags.css";
 import "./layout/layout.scss";
 import "./App.scss";
+import { Inicio } from "./pages/Inicio";
+import { Tramites } from "./pages/Tramites";
+import { RenovarNie } from "./pages/RenovarNie";
+import { FirmaElectronica } from "./pages/FirmaElectronica";
+import ScrollButton from "./components/ScrollButton";
 
 const App = () => {
     const [layoutMode, setLayoutMode] = useState("static");
     const [layoutColorMode, setLayoutColorMode] = useState("dark");
     const [inputStyle, setInputStyle] = useState("outlined");
     const [ripple, setRipple] = useState(false);
-    const [sidebarActive, setSidebarActive] = useState(true);
+    const [sidebarActive, setSidebarActive] = useState(false);
     const sidebar = useRef();
 
     const history = useHistory();
 
     let menuClick = false;
+
+    useEffect(() => {
+        setSidebarActive(false);
+    }, []);
 
     useEffect(() => {
         if (sidebarActive) {
@@ -263,7 +272,6 @@ const App = () => {
 
     return (
         <div className={wrapperClass} onClick={onWrapperClick}>
-            <Header />
             <AppTopbar onToggleMenu={onToggleMenu} />
 
             <CSSTransition classNames="layout-sidebar" timeout={{ enter: 200, exit: 200 }} in={isSidebarVisible()} unmountOnExit>
@@ -275,39 +283,12 @@ const App = () => {
                     <AppMenu model={menu} onMenuItemClick={onMenuItemClick} />
                 </div>
             </CSSTransition>
-
-            <AppConfig rippleEffect={ripple} onRippleEffect={onRipple} inputStyle={inputStyle} onInputStyleChange={onInputStyleChange} layoutMode={layoutMode} onLayoutModeChange={onLayoutModeChange} layoutColorMode={layoutColorMode} onColorModeChange={onColorModeChange} />
-
             <div className="layout-main">
-                <Route path="/" exact component={Dashboard} />
-                <Route path="/formlayout" component={FormLayoutDemo} />
-                <Route path="/input" component={InputDemo} />
-                <Route path="/floatlabel" component={FloatLabelDemo} />
-                <Route path="/invalidstate" component={InvalidStateDemo} />
-                <Route path="/button" component={ButtonDemo} />
-                <Route path="/table" component={TableDemo} />
-                <Route path="/list" component={ListDemo} />
-                <Route path="/tree" component={TreeDemo} />
-                <Route path="/panel" component={PanelDemo} />
-                <Route path="/overlay" component={OverlayDemo} />
-                <Route path="/menu" component={MenuDemo} />
-                <Route path="/messages" component={MessagesDemo} />
-                <Route path="/file" component={FileDemo} />
-                <Route path="/chart" component={ChartDemo} />
-                <Route path="/misc" component={MiscDemo} />
-                <Route path="/display" component={DisplayDemo} />
-                <Route path="/elevation" component={ElevationDemo} />
-                <Route path="/flexbox" component={FlexBoxDemo} />
-                <Route path="/icons" component={IconsDemo} />
-                <Route path="/grid" component={GridDemo} />
-                <Route path="/spacing" component={SpacingDemo} />
-                <Route path="/typography" component={TypographyDemo} />
-                <Route path="/text" component={TextDemo} />
-                <Route path="/calendar" component={Calendar} />
-                <Route path="/timeline" component={TimelineDemo} />
-                <Route path="/crud" component={Crud} />
-                <Route path="/empty" component={EmptyPage} />
-                <Route path="/documentation" component={Documentation} />
+                <Route path="/tramites" exact component={Tramites} />
+                <Route path="/RenovarNIE" exact component={RenovarNie} />
+                <Route path="/FirmaElectronica" exact component={FirmaElectronica} />
+                <Route path="/" exact component={Inicio} />
+                <ScrollUpButton />
             </div>
 
             <AppFooter />

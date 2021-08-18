@@ -2,17 +2,17 @@
     position: fixed;
     height: 50px;
     padding: 1em 2em 0em 2em;
-    color: #ffffff;
+    // color: #ffffff;
     z-index: 999;
     right: 0;
     @include clearfix();
-    @include linear-gradient-left($topbarLeftBgColor,$topbarRightBgColor);
+    @include linear-gradient-left($topbarLeftBgColor, $topbarRightBgColor);
     transition: left $transitionDuration;
 
     .layout-topbar-icons {
         float: right;
         display: block;
-        animation-duration: .5s;
+        animation-duration: 0.5s;
 
         button {
             position: relative;
@@ -76,10 +76,26 @@
                 margin: 0px;
                 border-radius: 2px;
 
-                &::-webkit-input-placeholder { color:$topbarSearchInputColor; opacity: .7; transition: opacity $transitionDuration;}
-                &:-moz-placeholder { color:$topbarSearchInputColor; opacity: .7; transition: opacity $transitionDuration;}
-                &::-moz-placeholder { color:$topbarSearchInputColor; opacity: .7; transition: opacity $transitionDuration;}
-                &:-ms-input-placeholder { color:$topbarSearchInputColor; opacity: .7; transition: opacity $transitionDuration;}
+                &::-webkit-input-placeholder {
+                    color: $topbarSearchInputColor;
+                    opacity: 0.7;
+                    transition: opacity $transitionDuration;
+                }
+                &:-moz-placeholder {
+                    color: $topbarSearchInputColor;
+                    opacity: 0.7;
+                    transition: opacity $transitionDuration;
+                }
+                &::-moz-placeholder {
+                    color: $topbarSearchInputColor;
+                    opacity: 0.7;
+                    transition: opacity $transitionDuration;
+                }
+                &:-ms-input-placeholder {
+                    color: $topbarSearchInputColor;
+                    opacity: 0.7;
+                    transition: opacity $transitionDuration;
+                }
             }
 
             .layout-topbar-search-icon {
@@ -92,10 +108,18 @@
             &:hover {
                 input {
                     border-bottom-color: $topbarItemHoverColor;
-                    &::-webkit-input-placeholder { opacity: 1 }
-                    &:-moz-placeholder {opacity: 1}
-                    &::-moz-placeholder {opacity: 1}
-                    &:-ms-input-placeholder {opacity: 1}
+                    &::-webkit-input-placeholder {
+                        opacity: 1;
+                    }
+                    &:-moz-placeholder {
+                        opacity: 1;
+                    }
+                    &::-moz-placeholder {
+                        opacity: 1;
+                    }
+                    &:-ms-input-placeholder {
+                        opacity: 1;
+                    }
                 }
 
                 .layout-topbar-search-icon {
