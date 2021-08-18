@@ -1,6 +1,7 @@
 {
-    "tramitesServices": [
+    "tramites": [
         { "label": "Renovar el NIE", "url": "/RenovarNIE" },
         { "label": "Firma Electrónica", "url": "/FirmaElectronica" }
-    ]
+    ],
+    "tramitesServices": [{ "label": "Certificado Digital", "url": "/certificadodigital" }]
 }

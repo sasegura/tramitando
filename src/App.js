@@ -59,6 +59,7 @@ import { Tramites } from "./pages/Tramites";
 import { RenovarNie } from "./pages/RenovarNie";
 import { FirmaElectronica } from "./pages/FirmaElectronica";
 import ScrollButton from "./components/ScrollButton";
+import { CertificadoDigital } from "./Tramite/CertificadoDigital";
 
 const App = () => {
     const [layoutMode, setLayoutMode] = useState("static");
@@ -287,6 +288,7 @@ const App = () => {
                 <Route path="/tramites" exact component={Tramites} />
                 <Route path="/RenovarNIE" exact component={RenovarNie} />
                 <Route path="/FirmaElectronica" exact component={FirmaElectronica} />
+                <Route path="/certificadodigital" exact component={CertificadoDigital} />
                 <Route path="/" exact component={Inicio} />
                 <ScrollUpButton />
             </div>
