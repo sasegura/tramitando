@@ -1,17 +1,20 @@
+import { Button } from "primereact/button";
+
 export default Navigator = (props) => {
     return (
-        <div className="p-d-flex">
+        <div className="p-d-flex p-justify-center">
             <p>
-                <button onClick={props.previousStep}>Previous Step</button>
+                <Button onClick={props.firstStep} icon="pi pi-angle-double-left" />
             </p>
             <p>
-                <button onClick={props.nextStep}>Next Step</button>
+                <Button onClick={props.previousStep} icon="pi pi-angle-left" />
             </p>
             <p>
-                <button onClick={props.firstStep}>First Step</button>
+                <Button onClick={props.nextStep} icon="pi pi-angle-right" />
             </p>
+
             <p>
-                <button onClick={props.lastStep}>Last Step</button>
+                <Button onClick={props.lastStep} icon="pi pi-angle-double-right" />
             </p>
         </div>
     );

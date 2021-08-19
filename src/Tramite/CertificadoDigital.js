@@ -9,24 +9,6 @@ import img2 from "../assets/images/tramites_alta_02.png";
 import Navigator from "./CertificadoDigital/Navigator";
 
 export const CertificadoDigital = () => {
-    const navigator = (props) => {
-        return (
-            <>
-                <p>
-                    <button onClick={props.previousStep}>Previous Step</button>
-                </p>
-                <p>
-                    <button onClick={props.nextStep}>Next Step</button>
-                </p>
-                <p>
-                    <button onClick={props.firstStep}>First Step</button>
-                </p>
-                <p>
-                    <button onClick={props.lastStep}>Last Step</button>
-                </p>
-            </>
-        );
-    };
     return (
         <div className="p-grid">
             <div className="p-col-12 p-d-flex">
