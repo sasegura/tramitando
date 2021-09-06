@@ -1,12 +1,12 @@
 import React from "react";
 import StepWizard from "react-step-wizard";
-import { Paso1 } from "./CertificadoDigital/Paso1";
-import { Paso2 } from "./CertificadoDigital/Paso2";
-import { Paso3 } from "./CertificadoDigital/Paso3";
-import { Paso4 } from "./CertificadoDigital/Paso4";
+import { Paso1 } from "./Paso1";
+import { Paso2 } from "./Paso2";
+import { Paso3 } from "./Paso3";
+import { Paso4 } from "./Paso4";
 
-import img2 from "../assets/images/tramites_alta_02.png";
-import Navigator from "./CertificadoDigital/Navigator";
+import img2 from "../../assets/images/tramites_alta_02.png";
+import Navigator from "./Navigator";
 
 export const CertificadoDigital = () => {
     return (
