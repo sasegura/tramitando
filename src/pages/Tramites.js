@@ -3,9 +3,28 @@ import React from "react";
 import * as tramite from "../service/TramitesService.json";
 import { useHistory } from "react-router-dom";
 import {SectionTitle} from "../Tramite/components/SectionTitle";
+import {SectionContent} from "../Tramite/components/SectionContent";
 export const Tramites = () => {
     const { tramites, tramitesServices } = tramite;
     const history = useHistory();
+    const data = [
+                    {
+                        "type": "text",
+                        "content": "Actualmente, tienes varios...."
+                    },
+                    {
+                        "type": "list",
+                        "content": [
+                            "Acceder a la web ...",
+                            "En la barra de opciones...",
+                            "Entre los 8 procedimientos..."
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "content": "Desde 2016, puedes...."
+                    }
+                ];
     return (
         <div className="p-grid">
             <div className="p-col-12 p-d-flex">
@@ -21,6 +40,10 @@ export const Tramites = () => {
                         );
                     })}
                     <SectionTitle title="Ayudas"/>
+                    {data.map( obj => {
+                        return <SectionContent contentData={obj}/>;
+                    })
+                    }
                     {/*<h5>Ayudas</h5>*/}
                     {tramites.map((tramite) => {
                         return (
