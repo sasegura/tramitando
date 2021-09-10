@@ -1,7 +1,7 @@
 .layout-topbar {
     position: fixed;
-    height: 50px;
-    padding: 1em 2em 0em 2em;
+    height: 60px;
+    padding: 0.5em 2em 0.5em 2em;
     // color: #ffffff;
     z-index: 999;
     right: 0;
@@ -148,4 +148,70 @@
     button {
         cursor: pointer;
     }
+}
+
+.top-bar-search {
+    input{
+        border: 0 none;
+        color: $topbarSearchInputBorderBottomColor;
+
+        &::-webkit-input-placeholder {
+            color: $topbarSearchInputColor;
+            opacity: 0.7;
+            transition: opacity $transitionDuration;
+        }
+
+        &:-moz-placeholder {
+            color: $topbarSearchInputColor;
+            opacity: 0.7;
+            transition: opacity $transitionDuration;
+        }
+
+        &::-moz-placeholder {
+            color: $topbarSearchInputColor;
+            opacity: 0.7;
+            transition: opacity $transitionDuration;
+        }
+
+        &:-ms-input-placeholder {
+            color: $topbarSearchInputColor;
+            opacity: 0.7;
+            transition: opacity $transitionDuration;
+        }
+    }
+
+    border: 0 none;
+    background: transparent;
+    border-bottom: 1px solid $topbarSearchInputBorderBottomColor;
+    outline: 0 none;
+    box-shadow: none;
+    margin: 0px;
+    border-radius: 2px;
+
+    &:hover {
+            border-bottom-color: $topbarItemHoverColor;
+
+            &::-webkit-input-placeholder {
+                opacity: 1;
+            }
+
+            &:-moz-placeholder {
+                opacity: 1;
+            }
+
+            &::-moz-placeholder {
+                opacity: 1;
+            }
+
+            &:-ms-input-placeholder {
+                opacity: 1;
+        }
+
+        i {
+            color: $topbarItemHoverColor;
+            cursor: pointer;
+        }
+    }
+
+
 }
