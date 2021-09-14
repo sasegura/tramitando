@@ -136,8 +136,8 @@ const App = () => {
             </CSSTransition>
             <div className="layout-main">
                 <Route path="/tramites" exact component={Tramites} />
-                <Route path="/RenovarNIE" exact component={RenovarNie} />
-                <Route path="/FirmaElectronica" exact component={FirmaElectronica} />
+                <Route path="/renovarnie" exact component={RenovarNie} />
+                <Route path="/firmaelectronica/:title" exact component={FirmaElectronica} />
                 <Route path="/certificadodigital" exact component={CertificadoDigital} />
                 <Route path="/" exact component={Inicio} />
                 <ScrollUpButton />
