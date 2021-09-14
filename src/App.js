@@ -137,7 +137,7 @@ const App = () => {
                 <div className={clsCard}>
                     <Route path="/tramites" exact component={Tramites}/>
                     <Route path="/renovarnie" exact component={RenovarNie}/>
-                    <Route path="/firmaelectronica/:title" exact component={FirmaElectronica}/>
+                    <Route path="/firmaelectronica" exact component={FirmaElectronica}/>
                     <Route path="/certificadodigital" exact component={CertificadoDigital}/>
                     <Route path="/" exact component={Inicio}/>
                     <ScrollUpButton/>

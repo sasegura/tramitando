@@ -2,7 +2,7 @@ import React from "react";
 import {useParams} from "react-router-dom"
 
 export const FirmaElectronica = () => {
-    const {title: sectionTitle} = useParams();
+    // const {title: sectionTitle} = useParams();
     return (
         <div className="p-d-flex p-flex-column p-card-body">
 
