@@ -7,6 +7,7 @@ import {FormalitiesContainer} from "../Tramite/components/FormalitiesContainer";
 
 export const Tramites = () => {
     const {tramites, tramitesServices} = tramitesJson;
+
     const history = useHistory();
     const data = {
         "title": "Firma electrónica",
@@ -98,6 +99,7 @@ export const Tramites = () => {
                             </li>
                         );
                     })}
+
                     <p>Página para mostrar información sobre los tramites que se pueden realizar.</p>
                 </div>
             </div>
