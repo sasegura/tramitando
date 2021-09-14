@@ -1,17 +1,9 @@
 {
-    "tramites": [
-        { "label": "Renovar el NIE", "url": "/RenovarNIE" },
-        { "label": "Firma Electrónica", "url": "/FirmaElectronica" }
-    ],
-    "tramitesServices": [{ "label": "Certificado Digital", "url": "/certificadodigital" }],
-
-
-    "nuevo objeto": {
     "formalities": [
         {
             "url": "/firmaelectronica",
             "name": "Electronic_Signature",
-            "title": "Firma Electronica"
+            "title": "Firma electrónica"
         },
         {
             "url": "/renovarnie",
@@ -20,68 +12,66 @@
         }
     ],
     "details": {
-        "Electronic_Signature": {
-        "title": "Firma electrónica",
-        "sections": [
-            {
-                "title": "¿Qué requisitos necesito para renovar el NIE?",
-                "contents": [
-                    {
-                        "type": "text",
-                        "content": "La renovación del NIE es uno de los...."
-                    }
-                ]
-            },
-            {
-                "title": "¿Dónde puedo renovarlo?",
-                "contents": [
-                    {
-                        "type": "text",
-                        "content": "Actualmente, tienes varios...."
-                    },
-                    {
-                        "type": "list",
-                        "content": [
-                            "Acceder a la web ...",
-                            "En la barra de opciones...",
-                            "Entre los 8 procedimientos..."
-                        ]
-                    },
-                    {
-                        "type": "text",
-                        "content": "Desde 2016, puedes...."
-                    }
-                ]
-            }
-        ],
-        "guided_help": {
-            "pageNumber": 4,
-            "pages": [
+        "Firma electrónica": {
+            "sections": [
                 {
-                    "title": "asd",
+                    "title": "¿Qué requisitos necesito para renovar el NIE?",
                     "contents": [
                         {
                             "type": "text",
-                            "content": "dasdasd"
+                            "content": "La renovación del NIE es uno de los...."
+                        }
+                    ]
+                },
+                {
+                    "title": "¿Dónde puedo renovarlo?",
+                    "contents": [
+                        {
+                            "type": "text",
+                            "content": "Actualmente, tienes varios...."
                         },
                         {
                             "type": "list",
                             "content": [
-                                "asdadasd",
-                                "asdasd"
+                                "Acceder a la web ...",
+                                "En la barra de opciones...",
+                                "Entre los 8 procedimientos..."
                             ]
                         },
                         {
                             "type": "text",
-                            "content": "asdasd"
+                            "content": "Desde 2016, puedes...."
                         }
                     ]
                 }
-            ]
+            ],
+            "guided_help": {
+                "pageNumber": 4,
+                "pages": [
+                    {
+                        "title": "asd",
+                        "contents": [
+                            {
+                                "type": "text",
+                                "content": "dasdasd"
+                            },
+                            {
+                                "type": "list",
+                                "content": [
+                                    "asdadasd",
+                                    "asdasd"
+                                ]
+                            },
+                            {
+                                "type": "text",
+                                "content": "asdasd"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "Renovar NIE": {
         }
-    },
-    "Renew_Nie": {
     }
-    }
-}
 }
