@@ -44,6 +44,7 @@ const App = () => {
     useEffect(() => {
         setSidebarActive(false);
         ReactGA.initialize("UA-207650208-1");
+        history.listen((location) => ReactGA.pageview(location.pathname));
     }, []);
 
     useEffect(() => {
