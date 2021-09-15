@@ -14,32 +14,70 @@
             "name": "Firma electrónica",
             "sections": [
                 {
-                    "title": "¿Qué requisitos necesito para renovar el NIE?",
+                    "title": "Requisitos para tramitar el certificado de firma electrónica o digital",
                     "contents": [
                         {
                             "type": "text",
-                            "content": "La renovación del NIE es uno de los...."
+                            "content": "En la actualidad, el avance de la tecnología nos permite gestionar todo tipo de trámites de forma online desde casa. Esto ha traído muchas ventajas y beneficios, especialmente para quienes no desean pasar mucho tiempo en largas colas."
+                        },
+                        {
+                            "type": "text",
+                            "content": "Sin embargo, muchos de estos trámites exigen una autentificación de identidad y confiabilidad que podemos tener con una firma electrónica. A continuación, te explicamos todo lo que necesitas saber sobre la firma electrónica. No te pierdas esta guía. Ahórrate tiempo y dolores de cabeza."
                         }
                     ]
                 },
                 {
-                    "title": "¿Dónde puedo renovarlo?",
+                    "title": "¿Qué es la firma electrónica o digital?",
                     "contents": [
                         {
                             "type": "text",
-                            "content": "Actualmente, tienes varios...."
+                            "content": "Estas firmas son utilizadas para mantener segura la comunicación electrónica mediante la certificación de identidades de manera electrónica o digital. Permiten hacer gestiones por internet con facilidad, comodidad y la máxima seguridad."
+                        },
+                        {
+                            "type": "text",
+                            "content": "El Reglamento (UE) Nº 910/2014 del Parlamento Europeo y del Consejo establece que la firma electrónica son un conjunto de datos en formato electrónico que se anexan a una información para certificar un procedimiento. Esta se utiliza para fundamentos legales, ya que tiene validez jurídica."
+                        },
+                        {
+                            "type": "text",
+                            "content": "Por otro lado, la firma digital se refiere a los caracteres que se colocan en un documento para identificar al firmante y darle así validez al documento. Está basada en el sistema PKI (Criptografía de Clave Pública) y tiene certificado oficial por parte de una Institución que le da validez."
+                        }
+                    ]
+                },
+                {
+                    "title": "¿Qué puedo hacer con la firma electrónica?",
+                    "contents": [
+                        {
+                            "type": "text",
+                            "content": "Con la firma electrónica, puedes firmar todo tipo de documentos incluso las empresas la emplean en sus procesos legales y comerciales. También permite realizar trámites públicos y firmar contratos, formularios y autorizaciones de forma online. Algunos de los usos más frecuentes son:"
                         },
                         {
                             "type": "list",
                             "content": [
-                                "Acceder a la web ...",
-                                "En la barra de opciones...",
-                                "Entre los 8 procedimientos..."
+                                "Firmar correos electrónicos, contratos o facturas.",
+                                "Solicitar certificados de antecedentes penales, de empadronamiento o de nacimiento.",
+                                "Comprobar propiedades en el catastro.",
+                                "Consultar títulos universitarios, puntos de carnet, posición en bolsas de empleos públicas, vida laboral en la Seguridad Social, el tiempo restante para la jubilación, multas de circulación, asignación de colegios electorales y más.",
+                                "Pedir ayudas y subvenciones.",
+                                "Declaración de impuestos."
                             ]
-                        },
+                        }
+                    ]
+                },
+                {
+                    "title": "¿Puedo hacer lo mismo con mi DNI electrónico?",
+                    "contents": [
                         {
                             "type": "text",
-                            "content": "Desde 2016, puedes...."
+                            "content": "También puedes usar el DNIe para realizar la autenticación de identidad, firmar de forma electrónica, certificar integridad de documentos y como pasaporte de viaje. Por lo tanto, el DNIe sí permite hacer lo mismo que la firma electrónica."
+                        }
+                    ]
+                },
+                {
+                    "title": "¿Es lo mismo que certificado digital?",
+                    "contents": [
+                        {
+                            "type": "text",
+                            "content": "El DNI electrónico es un medio por el que se puede usar un certificado digital, pues este se almacena en el chip del DNIe y certifica tu identidad. Hay que decir que el DNIe es exclusivo para ciudadanos españoles y de la Comunidad europea."
                         }
                     ]
                 }
