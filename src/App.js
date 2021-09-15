@@ -43,7 +43,7 @@ const App = () => {
 
     useEffect(() => {
         setSidebarActive(false);
-        ReactGA.initialize("G-CMS0L0R8J3");
+        ReactGA.initialize("UA-207650208-1");
     }, []);
 
     useEffect(() => {
