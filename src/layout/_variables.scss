@@ -38,10 +38,14 @@ $topbarLeftBgColor: #ffffff;
 $topbarRightBgColor: #ffffff;
 $topbarItemBadgeBgColor: #ef6262;
 $topbarItemBadgeColor: #ffffff;
-$topbarItemColor: #0388e5; // #ffffff;
-$topbarItemHoverColor: #c3e8fb;
-$topbarSearchInputBorderBottomColor: #ffffff;
-$topbarSearchInputColor: #ffffff;
+$topbarItemColor: #c3e8fb; // #ffffff;
+$topbarItemHoverColor: #0388e5;
+$topbarSearchInputBorderBottomColor: var(--blue-400);
+//#ffffff;
+$topbarSearchInputColor: var(--blue-400);
+//#ffffff;
 
 /* Footer */
 $footerBgColor: #ffffff;
+
+

@@ -22,10 +22,11 @@ import "./layout/flags/flags.css";
 import "./layout/layout.scss";
 import "./App.scss";
 import { Inicio } from "./pages/Inicio";
-import { Tramites } from "./pages/Tramites";
+import { TramitesList } from "./pages/TramitesList";
 import { RenovarNie } from "./pages/RenovarNie";
 import { FirmaElectronica } from "./pages/FirmaElectronica";
 import { CertificadoDigital } from "./Tramite/CertificadoDigital/CertificadoDigital";
+import {TramiteDetails} from "./pages/TramiteDetails";
 
 const App = () => {
     const [layoutMode, setLayoutMode] = useState("static");
@@ -122,30 +123,64 @@ const App = () => {
         "layout-sidebar-light": layoutColorMode === "light",
     });
 
+    const layoutClasses = "p-col-12 p-md-10";
+    const clsCard = "p-card";
+
     return (
-        <div className={wrapperClass} onClick={onWrapperClick}>
-            <AppTopbar onToggleMenu={onToggleMenu} />
 
-            <CSSTransition classNames="layout-sidebar" timeout={{ enter: 200, exit: 200 }} in={isSidebarVisible()} unmountOnExit>
-                <div ref={sidebar} className={sidebarClassName} onClick={onSidebarClick}>
-                    <div className="layout-logo" style={{ cursor: "pointer" }} onClick={() => history.push("/")}>
-                        <img alt="Logo" src={logo} />
-                    </div>
-                    <AppProfile />
+        <div className="p-d-flex p-flex-column p-flex-wrap p-jc-start p-ai-center " style={{minHeight: "100vh"}}>
+            <nav className={layoutClasses} style={{position: "fixed", paddingTop: "0px"}}>
+                <div className={clsCard}>
+                    <AppTopbar/>
                 </div>
-            </CSSTransition>
-            <div className="layout-main">
-                <Route path="/tramites" exact component={Tramites} />
-                <Route path="/RenovarNIE" exact component={RenovarNie} />
-                <Route path="/FirmaElectronica" exact component={FirmaElectronica} />
-                <Route path="/certificadodigital" exact component={CertificadoDigital} />
-                <Route path="/" exact component={Inicio} />
-                <ScrollUpButton />
-            </div>
+            </nav>
+            <main className={layoutClasses} style={{marginTop: "70px"}}>
+                <div className={clsCard}>
+                    <Route path="/tramites" exact component={TramitesList}/>
+                    <Route path="/tramites/:id" exact component={TramiteDetails}/>
 
-            <AppFooter />
+                    {/*<Route path="/renovarnie" exact component={RenovarNie}/>*/}
+                    {/*<Route path="/firmaelectronica" exact component={FirmaElectronica}/>*/}
+                    {/*<Route path="/certificadodigital" exact component={CertificadoDigital}/>*/}
+                    <Route path="/" exact component={Inicio}/>
+                    <ScrollUpButton/>
+                </div>
+            </main>
+            <footer className={layoutClasses + " p-mt-auto"}
+                    style={{paddingBottom: "0"}}>
+                <div className={clsCard}>
+                    <AppFooter/>
+                </div>
+            </footer>
         </div>
     );
 };
+
+        {/*<div className={wrapperClass} onClick={onWrapperClick}>*/}  //TODO Remove this commented code
+        {/*    <div className="layout-topbar p-d-">*/}
+        {/*        <div className="p-grid">*/}
+        {/*        <AppTopbar onToggleMenu={onToggleMenu} className="p-offset-2" />*/}
+        {/*        </div>*/}
+        {/*    </div>*/}
+
+        {/*    <CSSTransition classNames="layout-sidebar" timeout={{ enter: 200, exit: 200 }} in={isSidebarVisible()} unmountOnExit>*/}
+        {/*        <div ref={sidebar} className={sidebarClassName} onClick={onSidebarClick}>*/}
+        {/*            <div className="layout-logo" style={{ cursor: "pointer" }} onClick={() => history.push("/")}>*/}
+        {/*                <img alt="Logo" src={logo} />*/}
+        {/*            </div>*/}
+        {/*            <AppProfile />*/}
+        {/*        </div>*/}
+        {/*    </CSSTransition>*/}
+        {/*    <div className="layout-main">*/}
+        {/*        <Route path="/tramites" exact component={Tramites} />*/}
+        {/*        <Route path="/RenovarNIE" exact component={RenovarNie} />*/}
+        {/*        <Route path="/FirmaElectronica" exact component={FirmaElectronica} />*/}
+        {/*        <Route path="/certificadodigital" exact component={CertificadoDigital} />*/}
+        {/*        <Route path="/" exact component={Inicio} />*/}
+        {/*        <ScrollUpButton />*/}
+        {/*    </div>*/}
+
+        {/*    <AppFooter />*/}
+        {/*</div>*/}
 
 export default App;

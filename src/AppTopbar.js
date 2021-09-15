@@ -1,26 +1,40 @@
-import React from "react";
-import { InputText } from "primereact/inputtext";
-import { Button } from "primereact/button";
-import { useHistory } from "react-router-dom";
+import React, {useState} from "react";
+import {InputText} from "primereact/inputtext";
+import {Button} from "primereact/button";
+import {useHistory} from "react-router-dom";
+import logoImg from "./assets/images/logo.ico"; // TODO cambiar imagen
+
 
 export const AppTopbar = (props) => {
     const history = useHistory();
+    const [inputText, setInputText] = useState("");
+
     return (
-        <div className="layout-topbar clearfix">
-            <Button
-                className="p-button-text"
-                onClick={() => history.goBack()}
-                label=""
-                icon="pi pi-arrow-left
-"
+        <div className={"p-d-flex p-flex-wrap p-ai-center"}
+             style={{padding: "0.5em 2em"}}>
+            <img alt="logo" src={logoImg}
+                 onClick={() => history.push("/")}
+                 height="40"
+                 style={{cursor: "pointer"}}
             />
-            {/* <button type="button" className="p-link layout-menu-button" onClick={props.onToggleMenu}>
-                <span className="pi pi-bars" />
-    </button> */}
-            <Button className="p-button-text" onClick={() => history.push("/")} label="Logo" />
-            <div className="layout-topbar-icons">
-                <Button className="p-button-text  " label="Trámites" onClick={() => history.push("/tramites")} />
-            </div>
+
+            <Button className="p-button-text p-ml-auto"
+                    label="Tramites"
+                    onClick={() => history.push("/tramites")}
+            />
+
+            <span className="p-input-icon-right p-ml-3 top-bar-search">
+                <i className="pi pi-search"
+                   style={{color: "var(--blue-400)"}}
+                   onClick={() => setInputText("")}
+                />
+                <InputText type="search"
+                           value={inputText}
+                           onChange={(e) => setInputText(e.target.value)}
+                           placeholder="Buscar"
+                />
+            </span>
         </div>
+
     );
 };
