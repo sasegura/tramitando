@@ -10,5 +10,6 @@ export const Inicio = () => {
             <h5>Inicio Page</h5>
             <p>Página inicial para mostrar el contenido del sitio web.</p>
         </div>
+
     );
 };
