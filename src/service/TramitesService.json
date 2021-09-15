@@ -1,18 +1,17 @@
 {
     "formalities": [
         {
-            "url": "/firmaelectronica",
-            "name": "Electronic_Signature",
-            "title": "Firma electrónica"
+            "id": "_1",
+            "name": "Firma electrónica"
         },
         {
-            "url": "/renovarnie",
-            "name": "Renew_Nie",
-            "title": "Renovar NIE"
+            "id": "_2",
+            "name": "Renovar NIE"
         }
     ],
     "details": {
-        "Firma electrónica": {
+        "_1" : {
+            "name": "Firma electrónica",
             "sections": [
                 {
                     "title": "¿Qué requisitos necesito para renovar el NIE?",
@@ -71,7 +70,40 @@
                 ]
             }
         },
-        "Renovar NIE": {
+        "_2": {
+            "name": "Renovar NIE",
+            "sections": [
+                {
+                    "title": "¿Qué requisitos necesito para renovar el NIE?",
+                    "contents": [
+                        {
+                            "type": "text",
+                            "content": "La renovación del NIE es uno de los...."
+                        }
+                    ]
+                },
+                {
+                    "title": "¿Dónde puedo renovarlo?",
+                    "contents": [
+                        {
+                            "type": "text",
+                            "content": "Actualmente, tienes varios...."
+                        },
+                        {
+                            "type": "list",
+                            "content": [
+                                "Acceder a la web ...",
+                                "En la barra de opciones...",
+                                "Entre los 8 procedimientos..."
+                            ]
+                        },
+                        {
+                            "type": "text",
+                            "content": "Desde 2016, puedes...."
+                        }
+                    ]
+                }
+            ]
         }
     }
 }

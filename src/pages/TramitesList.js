@@ -1,9 +1,9 @@
 import {Button} from "primereact/button";
-import React from "react";
 import {formalities} from "../service/TramitesService"
-import {useHistory} from "react-router-dom";
+import {useHistory, useLocation} from "react-router-dom";
 
-export const Tramites = () => {
+export const TramitesList = () => {
+    const {pathname: url} = useLocation();
     const history = useHistory();
 
     return (
@@ -13,7 +13,10 @@ export const Tramites = () => {
             {formalities.map((tramite) => {
                 return (
                     <li>
-                        <Button className="p-button-text" onClick={() => history.push(tramite.url)} label={tramite.title}/>
+                        <Button className="p-button-text"
+                                onClick={() => history.push(`${url}/${tramite.id}`)}
+                                label={tramite.name}
+                        />
                     </li>
                 );
             })}

@@ -22,10 +22,11 @@ import "./layout/flags/flags.css";
 import "./layout/layout.scss";
 import "./App.scss";
 import { Inicio } from "./pages/Inicio";
-import { Tramites } from "./pages/Tramites";
+import { TramitesList } from "./pages/TramitesList";
 import { RenovarNie } from "./pages/RenovarNie";
 import { FirmaElectronica } from "./pages/FirmaElectronica";
 import { CertificadoDigital } from "./Tramite/CertificadoDigital/CertificadoDigital";
+import {TramiteDetails} from "./pages/TramiteDetails";
 
 const App = () => {
     const [layoutMode, setLayoutMode] = useState("static");
@@ -135,10 +136,12 @@ const App = () => {
             </nav>
             <main className={layoutClasses} style={{marginTop: "70px"}}>
                 <div className={clsCard}>
-                    <Route path="/tramites" exact component={Tramites}/>
-                    <Route path="/renovarnie" exact component={RenovarNie}/>
-                    <Route path="/firmaelectronica" exact component={FirmaElectronica}/>
-                    <Route path="/certificadodigital" exact component={CertificadoDigital}/>
+                    <Route path="/tramites" exact component={TramitesList}/>
+                    <Route path="/tramites/:id" exact component={TramiteDetails}/>
+
+                    {/*<Route path="/renovarnie" exact component={RenovarNie}/>*/}
+                    {/*<Route path="/firmaelectronica" exact component={FirmaElectronica}/>*/}
+                    {/*<Route path="/certificadodigital" exact component={CertificadoDigital}/>*/}
                     <Route path="/" exact component={Inicio}/>
                     <ScrollUpButton/>
                 </div>

@@ -4,7 +4,7 @@ import {Panel} from "primereact/panel";
 
 
 export const FormalitiesContainer = (props) => {
-    const {title: name, sections} = props.data;
+    const {name, sections} = props.data;
     return <Panel header={name}>
         {sections.map(({title, contents}) => {
             return (
