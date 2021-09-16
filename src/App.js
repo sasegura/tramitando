@@ -130,13 +130,13 @@ const App = () => {
     const clsCard = "p-card";
 
     return (
-        <div className="p-d-flex p-flex-column p-flex-wrap p-jc-start p-ai-center " style={{ minHeight: "100vh" }}>
-            <nav className={layoutClasses} style={{ position: "fixed", paddingTop: "0px" }}>
+        <div className="p-d-flex p-flex-column p-flex-wrap p-jc-start p-ai-center " style={{minHeight: "100vh"}}>
+            <nav className={layoutClasses} style={{position: "fixed", paddingTop: "0px", zIndex: "10"}}>
                 <div className={clsCard}>
                     <AppTopbar />
                 </div>
             </nav>
-            <main className={layoutClasses} style={{ marginTop: "70px" }}>
+            <main className={layoutClasses} style={{marginTop: "80px"}}>
                 <div className={clsCard}>
                     <Route path="/tramites" exact component={TramitesList} />
                     <Route path="/tramites/:id" exact component={TramiteDetails} />
