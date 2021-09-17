@@ -28,6 +28,7 @@ import { RenovarNie } from "./pages/RenovarNie";
 import { FirmaElectronica } from "./pages/FirmaElectronica";
 import { CertificadoDigital } from "./Tramite/CertificadoDigital/CertificadoDigital";
 import { TramiteDetails } from "./pages/TramiteDetails";
+import {TramiteGuide} from "./pages/TramiteGuide";
 
 const App = () => {
     const [layoutMode, setLayoutMode] = useState("static");
@@ -140,6 +141,7 @@ const App = () => {
                 <div className={clsCard}>
                     <Route path="/tramites" exact component={TramitesList} />
                     <Route path="/tramites/:id" exact component={TramiteDetails} />
+                    <Route path="/tramites/:id/guia" exact component={TramiteGuide} />
 
                     {/*<Route path="/renovarnie" exact component={RenovarNie}/>*/}
                     {/*<Route path="/firmaelectronica" exact component={FirmaElectronica}/>*/}
