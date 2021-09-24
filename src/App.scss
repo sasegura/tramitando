@@ -766,6 +766,17 @@ pre[class*="language-"] {
     line-height: 1;
 }
 
+///***CSS personalizadas***
+.p-timeline-event-opposite{
+    flex-grow: 0;
+}
+.timeline-step {
+    cursor: pointer !important;
+}
+.p-timeline-event-content { //TODO esto no funciona, hay que usar <CSSTransition>
+    transition: height 2s;
+}
+///*****************************
 @media screen and (max-width: 960px) {
     .customized-timeline {
         .p-timeline-event:nth-child(even) {
