@@ -1,0 +1,116 @@
+{
+    "_1": {
+        "name": "Firma electrónica",
+        "steps": [
+            {
+                "title": "Ordered",
+                "contents": [
+                    {
+                        "type": "img",
+                        "content": "/assets/formalities/images/tramites_alta_02.png"
+                    },
+                    {
+                        "type": "text",
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!"
+                    }
+                ]
+            },
+            {
+                "title": "Processing",
+                "contents": [
+                    {
+                        "type": "img",
+                        "content": "/assets/formalities/images/tramites_alta_02.png"
+                    },
+                    {
+                        "type": "text",
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!"
+                    }
+                ]
+            },
+            {
+                "title": "Shipped",
+                "contents": [
+                    {
+                        "type": "img",
+                        "content": "/assets/formalities/images/tramites_alta_02.png"
+                    },
+                    {
+                        "type": "text",
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!"
+                    }
+                ]
+            },
+            {
+                "title": "Delivered",
+                "contents": [
+                    {
+                        "type": "img",
+                        "content": "/assets/formalities/images/tramites_alta_02.png"
+                    },
+                    {
+                        "type": "text",
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!"
+                    }
+                ]
+            }
+        ]
+    },
+    "_2": {
+        "name": "Renovar NIE",
+        "steps": [
+            {
+                "title": "'Ordered'",
+                "contents": [
+                    {
+                        "type": "img",
+                        "content": "/assets/formalities/images/tramites_alta_02.png"
+                    },
+                    {
+                        "type": "text",
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!"
+                    }
+                ]
+            },
+            {
+                "title": "'Processing'",
+                "contents": [
+                    {
+                        "type": "img",
+                        "content": "/assets/formalities/images/tramites_alta_02.png"
+                    },
+                    {
+                        "type": "text",
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!"
+                    }
+                ]
+            },
+            {
+                "title": "'Shipped'",
+                "contents": [
+                    {
+                        "type": "img",
+                        "content": "/assets/formalities/images/tramites_alta_02.png"
+                    },
+                    {
+                        "type": "text",
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!"
+                    }
+                ]
+            },
+            {
+                "title": "'Delivered'",
+                "contents": [
+                    {
+                        "type": "img",
+                        "content": "/assets/formalities/images/tramites_alta_02.png"
+                    },
+                    {
+                        "type": "text",
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!"
+                    }
+                ]
+            }
+        ]
+    }
+}
