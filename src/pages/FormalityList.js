@@ -1,17 +1,24 @@
 import { Button } from "primereact/button";
-import { formalities } from "../service/TramitesService";
 import { useHistory, useLocation } from "react-router-dom";
+import {getList} from "../service/FormalityService";
+import {useEffect, useState} from "react";
 
-export const TramitesList = () => {
+export const FormalityList = () => {
     const { pathname: url } = useLocation();
     const history = useHistory();
+    const [formalities, setFormalities] = useState([]);
+
+    useEffect(()=>{
+        const service = getList();
+        service.then((data) => {setFormalities(data)});
+    }, []);
 
     return (
         <div className="p-d-flex p-flex-column p-card-body">
             <h5>Trámites</h5>
-            {formalities.map((tramite) => {
+            {formalities.map((tramite, idx) => {
                 return (
-                    <li>
+                    <li key={"formality_"+idx}>
                         <Button className="p-button-text" onClick={() => history.push(`${url}/${tramite.id}`)} label={tramite.name} />
                     </li>
                 );
