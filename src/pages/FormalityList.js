@@ -2,6 +2,7 @@ import { Button } from "primereact/button";
 import { useHistory, useLocation } from "react-router-dom";
 import {getList} from "../service/FormalityService";
 import {useEffect, useState} from "react";
+import {Page} from "../components/Page";
 
 export const FormalityList = () => {
     const { pathname: url } = useLocation();
@@ -13,9 +14,11 @@ export const FormalityList = () => {
         service.then((data) => {setFormalities(data)});
     }, []);
 
-    return (
-        <div className="p-d-flex p-flex-column p-card-body">
-            <h5>Trámites</h5>
+    const headerDivStyle = {paddingTop: "40px", paddingBottom: "80px", width: "100%", backgroundColor: "darkblue"};
+    const header = <div style={headerDivStyle}>
+        <h3 style={{color: "white", textAlign: "center"}}>Trámites</h3>
+    </div>;
+    const content = <div className="p-d-flex p-flex-column p-card-body">
             {formalities.map((tramite, idx) => {
                 return (
                     <li key={"formality_"+idx}>
@@ -24,6 +27,9 @@ export const FormalityList = () => {
                 );
             })}
             <p>Página para mostrar información sobre los tramites que se pueden realizar.</p>
-        </div>
+        </div>;
+
+    return (
+        <Page header={header} content={content} contentStyle={{marginTop: "-40px"}}/>
     );
 };

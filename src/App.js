@@ -127,18 +127,20 @@ const App = () => {
         "layout-sidebar-light": layoutColorMode === "light",
     });
 
-    const layoutClasses = "p-col-12 p-md-10";
-    const clsCard = "p-card";
+    const responsiveWidthClasses = "p-lg-10 p-md-11 p-col-12";
+    const mainContainersWidth = {width: "100%"};
+    // const clsCard = "p-card";
 
     return (
-        <div className="p-d-flex p-flex-column p-flex-wrap p-jc-start p-ai-center " style={{minHeight: "100vh"}}>
-            <nav className={layoutClasses} style={{position: "fixed", paddingTop: "0px", zIndex: "10"}}>
-                <div className={clsCard}>
-                    <AppTopbar />
+        <div className="p-d-flex p-flex-column p-flex-wrap" style={{minHeight: "100vh", backgroundColor: "white"}} >
+            <nav className="p-d-flex p-flex-column p-flex-wrap p-ai-center"
+                 style={{position: "fixed", paddingTop: "0px", zIndex: "10", backgroundColor: "#fff", ...mainContainersWidth}}>
+                <div className={responsiveWidthClasses}>
+                    <AppTopbar/>
                 </div>
             </nav>
-            <main className={layoutClasses} style={{marginTop: "80px"}}>
-                <div className={clsCard}>
+            <main className="p-d-flex p-flex-column p-flex-wrap p-ai-center" style={{marginTop: "88px", marginBottom: "1em"}}>
+                {/*<div className={responsiveWidthClasses}>*/}
                     <Route path="/tramites" exact component={FormalityList} />
                     <Route path="/tramites/:id" exact component={FormalityDetails} />
                     <Route path="/tramites/:id/guia" exact component={FormalityGuide} />
@@ -148,10 +150,11 @@ const App = () => {
                     {/*<Route path="/certificadodigital" exact component={CertificadoDigital}/>*/}
                     <Route path="/" exact component={Inicio} />
                     <ScrollUpButton />
-                </div>
+                {/*</div>*/}
             </main>
-            <footer className={layoutClasses + " p-mt-auto"} style={{ paddingBottom: "0" }}>
-                <div className={clsCard}>
+            <footer className={"p-mt-auto p-d-flex p-flex-column p-flex-wrap p-ai-center"}
+                    style={{backgroundColor: "#212121", marginTop: "5px"}} >
+                <div className={responsiveWidthClasses} >
                     <AppFooter />
                 </div>
             </footer>

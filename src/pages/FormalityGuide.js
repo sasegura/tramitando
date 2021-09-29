@@ -7,6 +7,7 @@ import {useHistory, useParams} from "react-router-dom";
 import img from "../assets/images/Logo sin nombre ni slogan.png"
 import {getGuide} from "../service/FormalityService";
 import {SectionContent} from "../components/tramites/SectionContent";
+import {Page} from "../components/Page";
 
 
 const formalityUrl = "/tramites";
@@ -121,16 +122,30 @@ export const FormalityGuide = () => {
         );
     };
 
-    const header = <GuideHeader guideTitle={guide.name}
+    const contentHeader = <GuideHeader guideTitle={guide.name}
                                 backText={"Info"}
                                 backAction={() => history.push(`${formalityUrl}/${id}`)}
     />;
 
-    return <Card title={header}>
-        <Timeline value={guide && guide.steps}
-                  // className="customized-timeline"
-                  marker={customizedMarker}
-                  content={customizedContent}
-        />
-    </Card>
+    const headerDivStyle = {paddingTop: "40px", paddingBottom: "80px", width: "100%", backgroundColor: "darkblue"};
+    const header = <div style={headerDivStyle}>
+        <h3 style={{color: "white", textAlign: "center"}}>{guide.name && guide.name.toUpperCase()}</h3>
+    </div>;
+
+    // contentHeader
+    return <Page header={header}
+                 content={<Timeline value={guide && guide.steps}
+                                    className="customized-timeline"
+                                    marker={customizedMarker}
+                                    content={customizedContent}/>}
+                 contentHeader={contentHeader}
+                 contentStyle={{marginTop: "-40px"}}
+    />
+    // return <Card title={header}>
+    //     <Timeline value={guide && guide.steps}
+    //               // className="customized-timeline"
+    //               marker={customizedMarker}
+    //               content={customizedContent}
+    //     />
+    // </Card>
 };
