@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {InputText} from "primereact/inputtext";
 import {Button} from "primereact/button";
 import {useHistory} from "react-router-dom";
-import logoImg from "./assets/images/logo.ico"; // TODO cambiar imagen
+import logoImg from "./assets/images/Logo con nombre sin slogan.png";
 
 
 export const AppTopbar = (props) => {
@@ -14,7 +14,7 @@ export const AppTopbar = (props) => {
              style={{padding: "0.5em 2em"}}>
             <img alt="logo" src={logoImg}
                  onClick={() => history.push("/")}
-                 height="40"
+                 height="60"
                  style={{cursor: "pointer"}}
             />
 

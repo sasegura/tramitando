@@ -23,11 +23,12 @@ import "./layout/flags/flags.css";
 import "./layout/layout.scss";
 import "./App.scss";
 import { Inicio } from "./pages/Inicio";
-import { TramitesList } from "./pages/TramitesList";
+import { FormalityList } from "./pages/FormalityList";
 import { RenovarNie } from "./pages/RenovarNie";
 import { FirmaElectronica } from "./pages/FirmaElectronica";
 import { CertificadoDigital } from "./Tramite/CertificadoDigital/CertificadoDigital";
-import { TramiteDetails } from "./pages/TramiteDetails";
+import { FormalityDetails } from "./pages/FormalityDetails";
+import {FormalityGuide} from "./pages/FormalityGuide";
 
 const App = () => {
     const [layoutMode, setLayoutMode] = useState("static");
@@ -130,16 +131,17 @@ const App = () => {
     const clsCard = "p-card";
 
     return (
-        <div className="p-d-flex p-flex-column p-flex-wrap p-jc-start p-ai-center " style={{ minHeight: "100vh" }}>
-            <nav className={layoutClasses} style={{ position: "fixed", paddingTop: "0px" }}>
+        <div className="p-d-flex p-flex-column p-flex-wrap p-jc-start p-ai-center " style={{minHeight: "100vh"}}>
+            <nav className={layoutClasses} style={{position: "fixed", paddingTop: "0px", zIndex: "10"}}>
                 <div className={clsCard}>
                     <AppTopbar />
                 </div>
             </nav>
-            <main className={layoutClasses} style={{ marginTop: "70px" }}>
+            <main className={layoutClasses} style={{marginTop: "80px"}}>
                 <div className={clsCard}>
-                    <Route path="/tramites" exact component={TramitesList} />
-                    <Route path="/tramites/:id" exact component={TramiteDetails} />
+                    <Route path="/tramites" exact component={FormalityList} />
+                    <Route path="/tramites/:id" exact component={FormalityDetails} />
+                    <Route path="/tramites/:id/guia" exact component={FormalityGuide} />
 
                     {/*<Route path="/renovarnie" exact component={RenovarNie}/>*/}
                     {/*<Route path="/firmaelectronica" exact component={FirmaElectronica}/>*/}
