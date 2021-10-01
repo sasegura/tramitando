@@ -2,6 +2,7 @@ import { Button } from "primereact/button";
 import { useHistory, useLocation } from "react-router-dom";
 import {getList} from "../service/FormalityService";
 import {useEffect, useState} from "react";
+import {Helmet} from 'react-helmet'
 
 export const FormalityList = () => {
     const { pathname: url } = useLocation();
@@ -15,6 +16,11 @@ export const FormalityList = () => {
 
     return (
         <div className="p-d-flex p-flex-column p-card-body">
+            <Helmet>
+                <title>Tramiteo-listado-trámites</title>
+                <meta name='description' content={`Listado de trámites en tramiteo.es`}/>
+                <meta charSet="utf-8" />
+            </Helmet>
             <h5>Trámites</h5>
             {formalities.map((tramite, idx) => {
                 return (
